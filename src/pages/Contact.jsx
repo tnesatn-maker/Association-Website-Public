@@ -1,32 +1,41 @@
-import React from 'react'
+import React from "react";
 
-export default function Contact(){
-  const [sent, setSent] = React.useState(false)
-  const onSubmit = (e)=>{
-    e.preventDefault()
-    setSent(true)
-  }
+const Contact = () => {
   return (
-    <div className="grid md:grid-cols-2 gap-8">
-      <section className="card">
-        <h1 className="text-2xl font-semibold">Contact TNESA</h1>
-        {!sent ? (
-          <form className="grid gap-3 mt-4" onSubmit={onSubmit}>
-            <input className="border rounded-xl p-2" placeholder="Your Name" required />
-            <input className="border rounded-xl p-2" type="email" placeholder="Email" required />
-            <input className="border rounded-xl p-2" placeholder="Phone" />
-            <textarea className="border rounded-xl p-2" rows="4" placeholder="Message" required />
-            <button className="btn btn-primary">Send</button>
-          </form>
-        ) : (
-          <p className="text-green-700">Thank you! We will get back to you shortly.</p>
-        )}
-      </section>
-      <aside className="card">
-        <h2 className="font-semibold">Association Address</h2>
-        <p className="text-gray-700 mt-2">Tamil Nadu, India</p>
-        <p className="text-gray-700 mt-1">Email: contact@tnesa.org</p>
-      </aside>
+    <div className="container mx-auto py-12 px-4">
+      <h1 className="text-4xl font-bold text-center mb-6">Contact Us</h1>
+      <div className="max-w-2xl mx-auto bg-white shadow-lg rounded-xl p-8">
+        <form className="space-y-4">
+          <input
+            type="text"
+            placeholder="Your Name"
+            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring focus:ring-blue-300"
+          />
+          <input
+            type="email"
+            placeholder="Your Email"
+            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring focus:ring-blue-300"
+          />
+          <textarea
+            placeholder="Your Message"
+            rows="4"
+            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring focus:ring-blue-300"
+          ></textarea>
+          <button
+            type="submit"
+            className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700"
+          >
+            Send Message
+          </button>
+        </form>
+        <div className="mt-6 text-center text-gray-700">
+          <p>📍 Chennai, Tamil Nadu</p>
+          <p>📞 +91 9962835944</p>
+          <p>✉️ sales@eyetechsecurities.in</p>
+        </div>
+      </div>
     </div>
-  )
-}
+  );
+};
+
+export default Contact;

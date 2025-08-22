@@ -1,79 +1,77 @@
-// src/pages/Directory.jsx
 import React from "react";
 
-// Example data (replace later with Firestore fetch)
 const members = [
   {
     id: 1,
     name: "Arun Kumar",
     city: "Chennai",
-    customerRating: 4.5,
-    adminRating: 5,
-    badge: "Platinum",
-    verified: true,
+    adminRating: 4,
+    customerRating: 5,
     website: "https://arunsecurity.com",
     phone: "+91 98765 43210",
-    email: "arun@arunsecurity.com"
+    email: "arun@arunsecurity.com",
+    badges: ["Platinum", "Verified"],
   },
   {
     id: 2,
-    name: "Priya Tech",
+    name: "Meena R",
     city: "Coimbatore",
+    adminRating: 5,
     customerRating: 4,
-    adminRating: 4.5,
-    badge: "Gold",
-    verified: false,
-    website: "https://priyatech.in",
+    website: "https://meenasecurity.com",
     phone: "+91 91234 56789",
-    email: "info@priyatech.in"
-  }
+    email: "meena@meenasecurity.com",
+    badges: ["Gold"],
+  },
 ];
 
 const Directory = () => {
   return (
-    <div className="container mx-auto py-10">
-      <h1 className="text-4xl font-bold text-center mb-10">TNESA Member Directory</h1>
-
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        {members.map((m) => (
+    <div className="container mx-auto py-12 px-4">
+      <h1 className="text-4xl font-bold text-center mb-8">Member Directory</h1>
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {members.map((member) => (
           <div
-            key={m.id}
-            className="bg-white shadow-lg rounded-2xl p-6 hover:shadow-xl transition"
+            key={member.id}
+            className="bg-white shadow-lg rounded-xl p-6 hover:shadow-2xl transition"
           >
-            <h2 className="text-2xl font-semibold">{m.name}</h2>
-            <p className="text-gray-600">{m.city}</p>
+            <h2 className="text-2xl font-semibold">{member.name}</h2>
+            <p className="text-gray-600">{member.city}</p>
 
-            <div className="mt-3 flex items-center gap-2">
-              <span className="font-medium">Customer Rating:</span>
-              <span className="text-yellow-500">
-                {"⭐".repeat(Math.round(m.customerRating))}
-              </span>
+            <div className="mt-2 text-yellow-500">
+              {"⭐".repeat(member.adminRating)}{" "}
+              <span className="text-gray-700 text-sm">(Admin Rated)</span>
+            </div>
+            <div className="text-green-500">
+              {"⭐".repeat(member.customerRating)}{" "}
+              <span className="text-gray-700 text-sm">(Customer Rated)</span>
             </div>
 
-            <div className="flex items-center gap-2">
-              <span className="font-medium">Admin Rating:</span>
-              <span className="text-blue-500">
-                {"⭐".repeat(Math.round(m.adminRating))}
-              </span>
-            </div>
-
-            <div className="mt-2">
-              <span className="px-3 py-1 rounded-full text-sm font-semibold bg-gradient-to-r from-yellow-400 to-orange-500 text-white">
-                {m.badge}
-              </span>
-              {m.verified && (
-                <span className="ml-2 px-3 py-1 rounded-full text-sm font-semibold bg-green-500 text-white">
-                  Verified
-                </span>
-              )}
-            </div>
-
-            <div className="mt-4 text-sm text-gray-700">
-              <p>📞 {m.phone}</p>
-              <p>✉️ {m.email}</p>
+            <div className="mt-3 space-y-1 text-gray-700">
+              <p>📞 {member.phone}</p>
+              <p>✉️ {member.email}</p>
               <p>
-                🌐 <a href={m.website} target="_blank" className="text-blue-600 hover:underline">{m.website}</a>
+                🌐{" "}
+                <a
+                  href={member.website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 hover:underline"
+                >
+                  {member.website}
+                </a>
               </p>
+            </div>
+
+            <div className="mt-4">
+              {member.badges.map((badge, idx) => (
+                <span
+                  key={idx}
+                  className="px-3 py-1 mr-2 rounded-full text-sm font-semibold bg-blue-500 text-white"
+                >
+                  {badge}
+                </span>
+              ))}
             </div>
           </div>
         ))}

@@ -1,19 +1,18 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-export default function Home(){
+import React from "react";
+
+const Home = () => {
   return (
-    <div className='space-y-12'>
-      <section className='bg-gradient-to-br from-sky-50 to-white border rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-8'>
-        <img src='/logo.png' alt='TNESA' className='w-28 h-28 rounded-2xl shadow' />
-        <div>
-          <h1 className='hero-title'>Connecting CCTV Professionals of Tamil Nadu</h1>
-          <p className='hero-sub mt-3'>Find verified system integrators, compare ratings, and contact trusted experts with confidence.</p>
-          <div className='mt-6 flex gap-3'>
-            <Link to='/directory' className='btn btn-primary'>Browse Installers</Link>
-            <Link to='/signup' className='btn'>Become a Member</Link>
-          </div>
-        </div>
-      </section>
+    <div className="text-center py-16">
+      <h1 className="text-5xl font-bold text-blue-700 mb-6">
+        Welcome to Our Association
+      </h1>
+      <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+        Connecting professionals, building trust, and ensuring reliable services
+        across Chennai. Explore our directory and find trusted members with
+        verified ratings and badges.
+      </p>
     </div>
-  )
-}
+  );
+};
+
+export default Home;
