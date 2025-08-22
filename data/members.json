@@ -1,0 +1,61 @@
+[
+  {
+    "id": 1,
+    "name": "Eye Tech Securities",
+    "company": "Eye Tech Securities",
+    "city": "Chennai",
+    "phone": "9962835944",
+    "email": "sales@eyetechsecurities.in",
+    "services": "CCTV Installation, Maintenance, DVR/NVR setup",
+    "customer_rating": 4.6,
+    "customer_reviews": [
+      {
+        "author": "Ravi",
+        "rating": 5,
+        "text": "Excellent service and timely support."
+      },
+      {
+        "author": "Meena",
+        "rating": 4,
+        "text": "Good technicians, resolved issues quickly."
+      }
+    ],
+    "admin_rating": 5,
+    "badge": "Gold",
+    "approved": true
+  },
+  {
+    "id": 2,
+    "name": "SecureVision",
+    "company": "SecureVision",
+    "city": "Coimbatore",
+    "phone": "9876543210",
+    "email": "contact@securevision.in",
+    "services": "IP Cameras, Access Control",
+    "customer_rating": 4.2,
+    "customer_reviews": [
+      {
+        "author": "Kumar",
+        "rating": 4,
+        "text": "Professional installation."
+      }
+    ],
+    "admin_rating": 4,
+    "badge": "Verified",
+    "approved": true
+  },
+  {
+    "id": 3,
+    "name": "Guardian Tech",
+    "company": "Guardian Tech",
+    "city": "Madurai",
+    "phone": "9001122334",
+    "email": "hello@guardiantech.com",
+    "services": "Analog CCTV, Repairs",
+    "customer_rating": 3.8,
+    "customer_reviews": [],
+    "admin_rating": 3,
+    "badge": "Platinum",
+    "approved": false
+  }
+]

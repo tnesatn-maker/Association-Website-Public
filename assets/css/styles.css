@@ -1,0 +1,26 @@
+
+/* TNESA - simple responsive styling */
+:root{--primary:#0b66c3;--muted:#f4f6f8;--card:#ffffff;--glass:rgba(255,255,255,0.9)}
+*{box-sizing:border-box;font-family:Inter, system-ui, Arial, sans-serif}
+body{margin:0;background:linear-gradient(180deg,#f7fbff 0%, #ffffff 100%);color:#122}
+.header{background:var(--primary);color:#fff;padding:18px 20px;display:flex;align-items:center;justify-content:space-between}
+.header .brand{display:flex;gap:12px;align-items:center}
+.logo{width:46px;height:46px;border-radius:6px;background:#fff;color:var(--primary);display:flex;align-items:center;justify-content:center;font-weight:700}
+.nav a{color:#eaf4ff;margin-left:12px;text-decoration:none}
+.container{max-width:1100px;margin:28px auto;padding:0 20px}
+.hero{background:linear-gradient(90deg, rgba(11,102,195,0.95), rgba(3,169,244,0.9));color:#fff;padding:36px;border-radius:12px;display:flex;justify-content:space-between;gap:20px}
+.hero .left{max-width:650px}
+.cta{margin-top:18px}
+.btn{display:inline-block;padding:10px 16px;border-radius:8px;text-decoration:none}
+.btn-primary{background:#fff;color:var(--primary);font-weight:600}
+.card{background:var(--card);padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(15,30,50,0.06);margin-bottom:16px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.search-bar{display:flex;gap:8px;margin-bottom:12px}
+.input, select{padding:10px;border-radius:8px;border:1px solid #d7e2ef;flex:1}
+.member-item{display:flex;gap:12px;align-items:center}
+.badge{padding:6px 8px;border-radius:999px;font-weight:600;background:#f0faff;border:1px solid #d5efff}
+.rating{font-weight:700}
+.footer{padding:18px;text-align:center;color:#556; margin-top:28px}
+.small{font-size:13px;color:#556}
+.toolbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:12px}
+@media(max-width:720px){.hero{flex-direction:column}}

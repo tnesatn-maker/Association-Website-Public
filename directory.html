@@ -1,0 +1,45 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>TNESA Directory</title><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="assets/css/styles.css"></head>
+<body id="directory">
+<header class="header">
+  <div class="brand">
+    <div class="logo">TN</div>
+    <div>
+      <div style="font-weight:700">TNESA</div>
+      <div class="small">Connecting CCTV Professionals of Tamil Nadu</div>
+    </div>
+  </div>
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="directory.html">Directory</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="member-dashboard.html">Members</a>
+    <a href="admin-dashboard.html">Admin</a>
+  </nav>
+</header>
+
+<main class="container">
+  <div class="card">
+    <h2>Members Directory (Public)</h2>
+    <p class="small">Public view shows basic info only. Members can log in for full details.</p>
+
+    <div class="toolbar">
+      <input id="q" class="input" placeholder="Search by name, company, city">
+      <select id="filter-city"><option value="">All Cities</option></select>
+      <select id="filter-badge"><option value="">All Badges</option></select>
+      <select id="sort"><option value="">Sort</option><option value="customer_desc">Customer Rating (High→Low)</option><option value="admin_desc">Admin Rating (High→Low)</option></select>
+      <button id="apply-filters" class="btn">Apply</button>
+      <button id="reset-filters" class="btn">Reset</button>
+    </div>
+
+    <div id="directory-list"></div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="small">© TNESA — Tamil Nadu Electronic Security Association</div>
+</footer>
+
+<script src="assets/js/app.js"></script>
+</body></html>
